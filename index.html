@@ -1,0 +1,319 @@
+<!DOCTYPE html><html><head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANHA STORE GAME</title>
+    <link rel="icon" type="image/x-icon" href="IMG/photo_2023-11-23_14-40-22-removebg-preview.png">
+	<style>
+		body {
+	background-color: #E0FFFF;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	color: red;
+	margin-top: 20px;
+	text-align: center;
+}
+
+form {
+	background-color: wheat;
+	color: red;
+	margin: 20px auto;
+	max-width: 500px;
+	text-align: center;
+}
+
+
+button[type="submit"] {
+	background-color: #E0FFFF;
+	border: none;
+	border-radius: 5px;
+	color: #E0FFFF;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 5px 10px;
+	transition: background-color 0.3s ease;
+	width: 30%;
+}
+
+
+img {
+	display: inline-block;
+	margin: 10px;
+	max-width: 100%;
+	width: 100%;
+}
+.mini-box {
+	background-color: #F8F8FF;
+	border: 0px solid ;
+	border-radius: 9px;
+	display: inline-block;
+	margin: 10px;
+	max-width: 60%;
+	padding: 18px;
+	text-align: center;
+	vertical-align: top;
+	width: 34%;
+}
+.mini-box img {
+	display: block;
+	margin: 0 auto;
+	border-radius: 9px;
+	max-width: 100%;
+	width: 100%;
+}
+
+.mini-box button {
+	background-color: #00FFFF;
+	border: none;
+	border-radius: 6px;
+	color: white;
+	cursor: pointer;
+	font-size: 12px;
+	margin-top: 8px;
+	padding: 2px 0px;
+	transition: background-color 0.5s ease;
+	width: 90%;
+}
+
+
+.mini-box button:hover {
+	background-color: #00FFFF;
+}
+span {
+      color: white;
+    }
+    .center-div {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-div {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image {
+  width: 355px;
+  height: 95px;
+  border-radius: 9px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}
+
+.payment {
+	background-image: url('../SipkwYC7LlKy.io/iduTsrn35q/mwYFfIpNSDPl.jpeg');
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 100px;
+			height: 70px;
+			display: block;
+			margin: auto;
+		}
+		
+.header {
+            background-color: #00FFFF;
+            padding: 13px;
+            text-align: center;
+        }
+        /* Define the style for the links */
+        .header a {
+            color: white;
+            text-decoration: none;
+            /* Add some padding and border to make them look like boxes */
+            padding: 7px;
+            border-radius: 5px;
+            font-size: 11px;
+            border: 1.3px solid white;
+        }
+        /* Change the color of the links on hover */
+        .header a:hover {
+            color: blue;
+            /* Change the background color and border color on hover */
+            background-color: #e0e0e0;
+            border-color: blue;
+        }
+        /* Add a new rule to change the color of the box or form */
+        .header a:active {
+            color: black;
+            /* Change the background color and border color to white */
+            background-color: white;
+            border-color: white;
+        }
+
+    /* Styles for the modal */
+     #myModal {
+      display: none;
+      position: fixed;
+      z-index: 0;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    /* Styles for the modal content */
+    .modal-content {
+      border-radius: 9px;
+      background-color: #fefefe;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 5px;
+      border: 2px solid #00223b;
+      text-align: center;
+      max-width: 80%;
+      width: 280px; /* Adjust the width as needed */
+    }
+
+    /* Styles for the close button */
+    .close-btn {
+      color: red; /* Set the color to red */
+      float: right;
+      cursor: pointer;
+    }
+
+    /* Styles for images inside the modal content */
+    .modal-content img {
+      border-radius: 9px;
+      max-width: 95%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+
+  </style>
+</head>
+<body>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6563a786ba9fcf18a80f0c7c/1hg6kcq7n';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+<!-- The modal itself -->
+
+<!-- JavaScript to control the modal -->
+<script>
+  function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+
+  // Call openModal() when the page loads
+  window.onload = openModal;
+</script>
+<div id="myModal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <!-- Close button (X) -->
+    <span class="close-btn" onclick="closeModal()">×</span>
+    <!-- Modal text -->
+    <link href="https://fonts.googleapis.com/css?family=Bayon" rel="stylesheet" type="text/css">
+<span style="font-family: 'Bayon'; font-size: 90%; color: cyan;">
+   សូមស្វាគមន៍មកកាន់ PANHA STORE 
+</span>
+    <!-- Modal image -->
+    <img src="IMG/Untitled-2.jpg" alt="Image">
+  </div>
+</div>
+
+
+
+<div class="center-div">
+  <img src="../5VICpsCfurWF.com/3sEVVYIW89Pb.jpg" class="image" id="myImage">
+</div>
+<script>
+		var images = ["bed.jpg"];
+var currentIndex = 0;
+var img = document.getElementById("myImage");
+
+setInterval(function() {
+  currentIndex++;
+  if (currentIndex >= images.length) {
+    currentIndex = 0;
+  }
+  img.src = images[currentIndex];
+}, 5000);
+
+</script>
+<div class="header">
+        <a href="#">Game Top Up</a>
+        <a href="About-Us.html">About Us</a>
+        <a href="Term-Policy.html">Term Policy</a>
+        <a href="Partner.html
+">Affiliate Partner</a>
+    </div>
+    
+<link href="https://fonts.googleapis.com/css?family=Bayon" rel="stylesheet" type="text/css">
+<span style="font-family: 'Bayon'; font-size: 80%;">
+Game / ហ្គេមពេញនិយម
+</span>
+
+	<div>
+		<div class="mini-box">
+    <a href="ml.html">
+        <img src="IMG/ml.jpg" alt="Game 1">
+    </a>
+    <button type="button" onclick="window.location.href = 'ml.html'">Top up / បញ្ចូលពេជ្រ</button>
+</div>
+		<div href="https://khmer24" class="mini-box">
+        <a href="free/fr.html">
+			  <img src="IMG/FL.jpg" alt="Game 2">
+    </a>
+		<button type="button">Top up / បញ្ចូលពេជ្ </button>
+	</div>
+		<div class="mini-box">
+			<img src="IMG/PU.jpg" alt="Game 3">
+			<button type="button">Coming Soon </button>
+		</div>
+		<div class="mini-box">
+			<img src="IMG/HO.jpg" alt="Game 3">
+			<button type="button">Coming Soon</button>
+		</div>
+		
+		
+		</div>
+		<div class="mini-box">
+			<img src="data:image/jpeg;base64,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" alt="Game 3">
+			<button type="button">Coming Soon</button>
+		</div>
+		<div class="mini-box">
+			<img src="IMG/A2.jpg" alt="Game 3">
+			<button type="button">Coming Soon</button>
+		</div>
+		
+
+	</div>
+
+<footer>
+  <div style="display: flex; align-items: center;">
+    <p style="margin: 0;">We Accept Payment  With : </p>
+    <img src="IMG/BA.jpg" alt="Bank Logo" style="width: 58px; height: 25px; margin-left: 10px;">
+  </div>
+  <p1>We accept payments With All Bank In Cambodia Member &amp; Partner Bakong. </p1>
+  <p>Copyright PanhaStore Cambodia 2023, ALl Right Reserved</p>
+</footer>
+
+
+
+</span></body></html>

